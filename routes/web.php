@@ -3,9 +3,12 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PhotoController;
-use App\Http\Controllers\VideoController;
+use App\Http\Controllers\BlogController;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\NewPostController;
+use App\Http\Controllers\CategoryController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -20,7 +23,9 @@ use App\Http\Controllers\ContactController;
 //Route::get('/', 'PhotoController@index');
 Route::get('/', [PhotoController::class,'photo']);
 
-Route::get('/videos', [VideoController::class,'video']);
+Route::get('/blog', [BlogController::class,'blog']);
+Route::get('/category', [CategoryController::class,'category']);
+Route::get('/new-post', [NewPostController::class,'newpost']);
 
 Route::get('/about', [AboutController::class,'about']);
 
